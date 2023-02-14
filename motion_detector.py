@@ -101,17 +101,15 @@ class MPU:
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    #ssid = "Safar"
-    ssid = "Rise Resident"
-    pswrd = "Boilermakers*100"
-    #pswrd = "sports23"
+    ssid = ""
+    pswrd = ""
     if wlan.isconnected():
         wlan.disconnect
     if not wlan.isconnected():
         wlan.connect(ssid,pswrd)
     while not wlan.isconnected():
         pass
-    print("Connected to Safar")
+    print("Connected to ")
     print("IP Address: {}".format(wlan.ifconfig()[0]))
     
 def mean():
